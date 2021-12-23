@@ -78,7 +78,7 @@ public class Login extends JFrame implements ActionListener {
                 String q = "select * from userdetails where username = '" + a + "' and password = '" + b + "'";
                 ResultSet rs = c.s.executeQuery(q);
                 if (rs.next()) {
-                    new Project(rs.getString("id")).setVisible(true);
+                    new Project(rs.getInt("id")).setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(null, "Invalid login");
                     tf1.setText("");
@@ -101,4 +101,3 @@ public class Login extends JFrame implements ActionListener {
         new Login().setVisible(true);
     }
 }
-
