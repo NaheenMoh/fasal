@@ -6,11 +6,11 @@ import java.sql.SQLException;
 import javax.swing.*;
 
 public class Project extends JFrame implements ActionListener {
-    static String id;
+    static int id;
 
     JTextField t1;
     JButton b1,b2;
-    Project(String id) {
+    Project(int id) {
         super("MovieLibrary");
 
         this.id = id;
@@ -63,6 +63,7 @@ public class Project extends JFrame implements ActionListener {
         {
             String s="Select title,year from movies where id="+id+";";
             try {
+                System.out.println(id);
                 new Movies(s).setVisible(true);
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
