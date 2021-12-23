@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Random;
 
 public class SignUp extends JFrame implements ActionListener{
     JPanel p1;
@@ -78,12 +79,13 @@ public class SignUp extends JFrame implements ActionListener{
             String name = t1.getText();
             String userid = t2.getText();
             String password = t3.getText();
+            Random ran = new Random();
+            int id = (ran.nextInt() % 100);
             try{
                 Conn c = new Conn();
-                String str = null;
-                    str = "insert into userdetails values('"+name+"','"+userid+",'"+password+"')";
-                    c.s.execute(str);
-                JOptionPane.showMessageDialog(null, "Account Created Successfully");
+                String str = "insert into userdetails values("+id+",'"+name+"','"+userid+"','"+password+"')";
+                    c.s.executeUpdate(str);
+            JOptionPane.showMessageDialog(null, "Account Created Successfully");
                 this.setVisible(false);
                 new Login().setVisible(true);
             }catch(Exception e){
