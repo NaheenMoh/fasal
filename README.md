@@ -5,25 +5,25 @@ after login, the user is prompted to Project.java class the user can search a mo
 the user also has an option to add it to his MovieList.
 
 total classes
-() Splash
-() Conn    #establishes connection with database
-() Login
-() SignUp
-() Project
-() API  #retrieves data from OMDB
-() Display
-() Movies
+(1) Splash
+(2) Conn    #establishes connection with database
+(3) Login
+(4) SignUp
+(5) Project
+(6) API  #retrieves data from OMDB
+(7) Display
+(8) Movies
 
 
 Database Tables
 
-() UserDetails ( id,name,username,password)
-() Movies (id,title,year)
+(1) UserDetails ( id,name,username,password)
+(2) Movies (id,title,year)
 
 Queries used
-() create database fasal
-() use fasal
-() create table UserDetails (id int NOT NULL, AUTO_INCREMENT,name varchar(35),username varchar(35),password varchar(35))
-() create table Movies(id int,title varchar(35),year varchar(4))
+(1) create database fasal
+(2) use fasal
+(3) create table UserDetails (id int NOT NULL,name varchar(35) NOT NULL,username varchar(35) NOT NULL,password varchar(35) NOT NULL)
+(4) create table Movies(id int,title varchar(35),year varchar(4))
 
 Use java jdbc Driver to establish connection to application
