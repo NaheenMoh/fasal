@@ -7,7 +7,7 @@ public class Conn{
     Statement s;
     public Conn(){
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();;
+            Class.forName("com.mysql.cj.jdbc.Driver");
             c =DriverManager.getConnection("jdbc:mysql:///fasal","root","");
             s =c.createStatement();
 
